@@ -29,19 +29,13 @@ namespace RNetTest
 			using (REngine rengine = REngine.GetInstance())
 			{
 				rengine.Initialize();
-				/*
-				String[] colNames = { "year", "userCount" };
-				IEnumerable[] col = new IEnumerable[2];
-				col[0] = h.year.ToArray();
-				col[1] = h.userCount.ToArray();
-				*/
 				//Importing libraries
 				rengine.Evaluate("library(ggplot2)");
 				rengine.Evaluate("library(ggthemes)");
 				rengine.Evaluate("library(dplyr)");
 				//Creating the dataframe
 				rengine.Evaluate("df <- setNames(data.frame(matrix(ncol=2, nrow=0)), c(\"year\",\"userCount\"))").AsDataFrame();
-				//Storing data into the dataframe
+				//Storing data from the class object into the dataframe
 				for(int i = 0; i < holder.year.Count; i++)
 				{
 					rengine.Evaluate("df[nrow(df)+1,] <- c(" + holder.year[i] + ", " + holder.userCount[i] + ")");

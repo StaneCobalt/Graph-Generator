@@ -26,7 +26,7 @@ namespace RNetTest.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CSTL171\\SQLEXPRESS;Initial Catalog=Practice;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source={Desktop Name}\\SQLEXPRESS;Initial Catalog=Practice;Integrated Security=True")]
         public string PracticeConnectionString {
             get {
                 return ((string)(this["PracticeConnectionString"]));
